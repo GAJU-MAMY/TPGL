@@ -1,18 +1,18 @@
 /**
  *
- * @author roudet
+ * @author gaju_mamy
  */
-public class Orange {
+public class Fraise {
     private double prix;
     private String origine;
 	
-    public Orange() 
+    public Fraise() 
     {
         this.prix = 0.5;  //prix en euros
         this.origine="Espagne";
     }
     
-    public Orange(double prix, String origine) 
+    public Fraise(double prix, String origine) 
     {
 	if(prix < 0)
 	    this.prix = -prix;  //une solution possible pour interdire les prix negatifs
@@ -43,31 +43,31 @@ public class Orange {
 
     @Override
     public String toString(){
-        return "Orange de " + origine + " a " + prix + " euros";
+        return "Fraise de " + origine + " a " + prix + " euros";
     }
 
     @Override
-    public boolean equals(Object o){  //predicat pour tester si 2 oranges sont equivalentes
+    public boolean equals(Object o){  //predicat pour tester si 2 fraises sont equivalentes
         if(o != null && getClass() == o.getClass()){
-            Orange or = (Orange) o;
-            return (prix == or.prix && origine.equals(or.origine));
+            Fraise fr = (Fraise) o;
+            return (prix == fr.prix && origine.equals(fr.origine));
         }
         return false;
     }
 
-    public boolean isSeedless() {  //predicat indiquant qu'une orange a des pepins
+    public boolean isSeedless() {  //predicat indiquant qu'une fraise a des pepins
         return false;
     }
 
 
     public static void main (String[] args){
         //Ecrire ici vos tests
-	System.out.println("premier test Orange");
-        Orange or=new Orange(1.99,"France");
-        Orange ch=new Orange(0.99,"Suisse");
-        System.out.println(or.toString());
-        or.setPrix(4.00);
-        System.out.println(or.toString());
+	System.out.println("premier test Fraise");
+        Fraise fr=new Fraise(1.99,"France");
+        Fraise ch=new Fraise(0.99,"Suisse");
+        System.out.println(fr.toString());
+        fr.setPrix(4.00);
+        System.out.println(fr.toString());
         System.out.println(ch.toString());
         ch.setOrigine("Mexico");
         //System.out.println(ch.toString());
